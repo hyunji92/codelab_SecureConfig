@@ -1,5 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <network-security-config>
-    <base-config cleartextTrafficPermitted="false" >
-    </base-config>
+    <base-config cleartextTrafficPermitted="false" />
+    <domain-config cleartextTrafficPermitted="true">
+        <domain includeSubdomains="true">localhost</domain>
+    </domain-config>
+    <!--이 구성은 다른 구성이 적용되는 "localhost"도메인 및 하위 도메인을 제외하고 모든 도메인에 base-config를 적용합니다.-->
 </network-security-config>
